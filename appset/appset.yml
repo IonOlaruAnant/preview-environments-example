@@ -12,8 +12,8 @@ spec:
         tokenRef:
           secretName: ionolaruanant-github-secret
           key: password
-#        labels:
-#        - preview
+        labels:
+        - preview
       requeueAfterSeconds: 15
   template:      
     metadata:
