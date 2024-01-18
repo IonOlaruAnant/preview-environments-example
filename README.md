@@ -30,12 +30,13 @@ argocd app create go-webserver-base \
     --revision HEAD \
     --path helm \
     --dest-name in-cluster \
-    --dest-namespace apps-preview
+    --dest-namespace apps-preview \
+    --grpc-web
 ```
 
 # Create the ApplicationSet with the Argo CD CLI
 ```
-argocd app create go-web-server-appset \
+argocd app create go-webserver-appset \
     --project default \
     --sync-policy automatic \
     --auto-prune --self-heal \
@@ -43,5 +44,6 @@ argocd app create go-web-server-appset \
     --revision HEAD \
     --path appset \
     --dest-name in-cluster \
-    --dest-namespace argocd
+    --dest-namespace argocd \
+    --grpc-web
 ```
