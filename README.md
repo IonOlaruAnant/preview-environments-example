@@ -20,7 +20,7 @@ Github code and dockerhub images
 kubectl create -f ./k8s/secret.yaml
 ```
 
-# Create the base application with the Argo CD CLI
+# Create the base application with the Argo CD CLI - you can skip this
 ```
 argocd app create go-webserver-base \
     --project default \
@@ -46,4 +46,8 @@ argocd app create go-webserver-appset \
     --dest-name in-cluster \
     --dest-namespace argocd \
     --grpc-web
+```
+or alternatively you can run
+```
+kubectl apply -f k8s/app-set.yaml
 ```

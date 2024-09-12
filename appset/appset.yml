@@ -27,6 +27,10 @@ spec:
           parameters:
           - name: "image.tag"
             value: '{{head_sha}}'
+          - name: "image.name"
+            value: 'iondockeranant/go-webserver'
+          - name: "container.name"
+            value: 'go-webserver'
           - name: "namespace"
             value: 'simple-deployment-{{branch}}-{{number}}'
       project: default
